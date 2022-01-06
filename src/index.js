@@ -15,7 +15,7 @@ let reRender = (state) => {
             <BrowserRouter>
                 <Header baseURL={baseURL}/>
                 <App store={store} baseURL={baseURL}/>
-                <Footer />
+                <Footer baseURL={baseURL}/>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

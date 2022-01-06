@@ -17,7 +17,7 @@ function App(props) {
     return (
         <main className={s.main}>
             <Routes>
-                <Route path={`${baseURL}/`} element={<Home />} />
+                <Route path={`${baseURL}/`} element={<Home baseURL={baseURL}/>} />
                 <Route path={`${baseURL}/about`} element={<About />} />
                 <Route path={`${baseURL}/skills`} element={<Skills />} />
                 <Route path={`${baseURL}/qualification`} element={<Qualification />} />

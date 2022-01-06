@@ -1,20 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import { Header } from './shared/header/Header';
 import { Footer } from './shared/footer/Footer';
 import { BrowserRouter } from 'react-router-dom';
-import store from "./redux/store"
+import store from "./redux/redux-store"
+
+const baseURL = "/resume-react"
 
 let reRender = (state) => {
     ReactDOM.render(
         <React.StrictMode>
-            <Header />
             <BrowserRouter>
-                <App store={store}/>
+                <Header baseURL={baseURL}/>
+                <App store={store} baseURL={baseURL}/>
+                <Footer />
             </BrowserRouter>
-            <Footer />
         </React.StrictMode>,
         document.getElementById('root')
     );

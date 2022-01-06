@@ -1,51 +1,76 @@
 import React from 'react'
+import { UilEstate, UilUser, UilFileAlt, UilDollarSign, UilBriefcaseAlt, UilComparison, UilMessage, UilApps, UilMoon, UilTimes, UilSun } from '@iconscout/react-unicons'
+import { NavLink } from 'react-router-dom'
+import s from "./Header.module.scss"
+import shared from "../../styles/shared.module.scss"
 
-export const Header = () => {
+export const Header = (props) => {
+
+    const baseURL = props.baseURL
+    const nav_items_data = [
+        {
+            name: "Главная",
+            url: "",
+            icon:<UilEstate />,
+        },
+        {
+            name: "Обо мне",
+            url: "about",
+            icon:<UilUser />,
+        },
+        {
+            name: "Навыки",
+            url: "skills",
+            icon:<UilFileAlt />,
+        },
+        {
+            name: "Квалификация",
+            url: "qualification",
+            icon:<UilComparison />,
+        },
+        {
+            name: "Сервис",
+            url: "services",
+            icon:<UilDollarSign />,
+        },
+        {
+            name: "Портфолио",
+            url: "portfolio",
+            icon:<UilBriefcaseAlt />,
+        },
+        {
+            name: "Контакты",
+            url: "contact-me",
+            icon:<UilMessage />,
+        },
+    ]
+    const nav_item_el = nav_items_data.map((item, index) => {
+        return(
+        <li className={s.nav__item}>
+            <NavLink to={`${baseURL}/${item.url}`} className={({ isActive }) => isActive ? `${s.nav__link} ${s.active_link}` : s.nav__link}>
+                {item.icon} {item.name}
+            </NavLink>
+        </li>
+        )
+    })
+
     return (
-        <header className="header" id="header">
-            <nav className="nav container">
-                <a href="#" className="nav__logo">Kate</a>
-                <div className="nav__menu" id="nav-menu">
-                    <ul className="nav__list grid">
-                        <li className="nav__item">
-                            <a href="#home" className="nav__link active-link">
-                                <i className="uil uil-estate nav__icon"></i> Главная
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#about" className="nav__link">
-                                <i className="uil uil-user nav__icon"></i> Обо мне
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#skills " className="nav__link">
-                                <i className="uil uil-file-alt nav__icon"></i> Навыки
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#services" className="nav__link">
-                                <i className="uil uil-briefcase-alt nav__icon"></i> Сервис
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#testimonial" className="nav__link">
-                                <i className="uil uil-comment nav__icon"></i> Отзывы
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="#contact" className="nav__link">
-                                <i className="uil uil-message nav__icon"></i> Контакты
-                            </a>
-                        </li>
+        <header className={s.header} id="header">
+            <nav className={`${s.nav} ${shared.container}`}>
+                <NavLink to={`${baseURL}/`} className={s.nav__logo}>Oleg</NavLink>
+                <div className={s.nav__menu} id="nav-menu">
+                    <ul className={`${s.nav__list} ${shared.grid}`}>
+                        {nav_item_el}
                     </ul>
-                    <i className="uil uil-times nav__close" id="nav-close"></i>
+                    <UilTimes />
                 </div>
 
-                <div className="nav__btns">
+                <div className={s.nav__btns}>
                     {/* Theme change button */}
-                    <i className="uil uil-moon change-theme" id="theme-button"></i>
-                    <div className="nav__toggle" id="nav-toggle">
-                        <i className="uil uil-apps"></i>
+                    {/* localStorage.getItem('theme') === 'dark-theme' ? <UilSun/> : <UilMoon />*/}
+                    <UilMoon />
+                    <div className={s.nav__toggle} id="nav-toggle">
+                        <UilApps />
                     </div>
                 </div>
             </nav>

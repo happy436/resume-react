@@ -10,7 +10,6 @@ let reducers = combineReducers(
     {
         themeReducer,
         languageReducer, 
-        
     });
 
 let store = createStore(reducers, persistedState);

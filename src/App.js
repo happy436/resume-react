@@ -8,9 +8,11 @@ import { Services } from './pages/services/Services';
 import { Skills } from './pages/skills/Skills';
 import s from "./App.module.scss"
 
-const baseURL = "/resume-react"
 
-function App() {
+
+function App(props) {
+
+    const baseURL = props.baseURL
 
     return (
         <main className={s.main}>

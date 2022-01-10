@@ -1,5 +1,5 @@
 .about__img{
-    width: 400px;
+    width: 250px;
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
@@ -15,14 +15,6 @@
     justify-content: center;
 }
 
-.about__data{
-
-}
-
-.about__container{
-    
-}
-
 @media screen and (min-width: 568px) {
     .about__container{
         grid-template-columns: repeat(2, 1fr);
@@ -34,7 +26,7 @@
         column-gap: 5rem;
     }
     .about__img {
-        width: 350px;
+        width: 400px;
     }
     .about__description {
         text-align: initial;

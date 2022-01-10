@@ -1,52 +1,52 @@
 import React from 'react'
+import s from "./Skills.module.scss"
+import v from "../../styles/shared.module.scss"
+import { UilBracketsCurly, UilServerNetwork } from '@iconscout/react-unicons'
+import { Category } from './components/category/Category'
+
+const tech_skills = [
+    {
+        icon: <UilBracketsCurly className={s.skills__icon} />,
+        name: "Front end developer",
+        subtitle: "More than 1 years",
+        skills:
+            [
+                { name: "HTML", percentage: "60%" },
+                { name: "CSS", percentage: "60%" },
+                { name: "SCSS", percentage: "50%" },
+                { name: "JavaScript", percentage: "40%" },
+                { name: "React", percentage: "30%" },
+            ],
+    },
+    {
+        icon: <UilServerNetwork className={s.skills__icon} />,
+        name: "Back end developer",
+        subtitle: "0.5 year",
+        skills:
+            [
+                { name: "Node Js", percentage: "10%" },
+            ],
+    },
+]
+
+const Categories = tech_skills.map((category) => {
+    return (
+        <Category
+            category_icon={category.icon}
+            category_name={category.name}
+            category_subtitle={category.subtitle}
+            skills={category.skills}
+        />
+    )
+})
 
 export const Skills = () => {
     return (
-        <section className="skills section" id="skills">
-            <h2 className="section__title">Навыки</h2>
-            <span className="section__subtitle"></span>
-            <div className="skills__container container grid">
-                {/* SKILLS 1 */}
-                <div className="skills__content skills__close">
-                    <div className="skills__header">
-                        <i className="uil uil-arrow-resize-diagonal skills__icon"></i>
-                        <div>
-                            <h1 className="skills__title">Stretching</h1>
-                            <span className="skills__subtitle">04+ года</span>
-                        </div>
-                    </div>
-
-                </div>
-                {/* SKILLS 2 */}
-                <div className="skills__content skills__close">
-                    <div className="skills__header">
-                        <i className="uil uil-dribbble skills__icon"></i>
-                        <div>
-                            <h1 className="skills__title">Fitness</h1>
-                            <span className="skills__subtitle">03+ года</span>
-                        </div>
-                    </div>
-                </div>
-                {/* SKILLS 3 */}
-                <div className="skills__content skills__close">
-                    <div className="skills__header">
-                        <i className="uil uil-plane-fly skills__icon"></i>
-                        <div>
-                            <h1 className="skills__title">Fly yoga</h1>
-                            <span className="skills__subtitle">03+ года</span>
-                        </div>
-                    </div>
-                </div>
-                {/* SKILLS 4 */}
-                <div className="skills__content skills__close">
-                    <div className="skills__header">
-                        <i className="uil uil-dumbbell skills__icon"></i>
-                        <div>
-                            <h1 className="skills__title">Gym</h1>
-                            <span className="skills__subtitle">02+ года</span>
-                        </div>
-                    </div>
-                </div>
+        <section className={`${s.skills} ${v.section}`} id={"skills"}>
+            <h2 className={v.section__title}>Навыки</h2>
+            <span className={v.section__subtitle}>My technical level</span>
+            <div className={`${s.skills__container} ${v.container} ${v.grid}`}>
+                {Categories}
             </div>
         </section>
     )

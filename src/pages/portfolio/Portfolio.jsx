@@ -1,8 +1,10 @@
 import React from 'react'
+import v from "../../styles/shared.module.scss"
 
 export const Portfolio = () => {
     return (
-        <section className="project section">
+        <div className={v.section}>Comming soon</div>
+        /* <section className="project section">
             <div className="project__bg">
                 <div className="project__container container grid">
                     <div className="project__data">
@@ -16,6 +18,6 @@ export const Portfolio = () => {
                     <img src="./img/project-light.png" alt="project-img" className="project__img" />
                 </div>
             </div>
-        </section>
+        </section> */
     )
 }

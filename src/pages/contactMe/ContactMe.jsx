@@ -1,9 +1,10 @@
 import React from 'react'
+import v from "../../styles/shared.module.scss"
 
 export const ContactMe = () => {
     return (
-        <section className="contact section" id="contact">
-            <h2 className="section__title">Контакты</h2>
+        <section className={v.section}>Comming soon
+            {/* <h2 className="section__title">Контакты</h2>
             <span className="section__subtitle">Связатся</span>
 
             <div >
@@ -30,7 +31,7 @@ export const ContactMe = () => {
                         </div>
                     </div>
                 </div>
-                {/*                 <form className="contact__form grid"
+                <form className="contact__form grid"
                     method="POST">
 
                     <div className="contact__inputs grid">
@@ -59,8 +60,8 @@ export const ContactMe = () => {
                         </a>
                         <input type="hidden" name="act" value="order" />
                     </div>
-                </form> */}
-            </div>
+                </form>
+            </div> */}
         </section>
     )
 }

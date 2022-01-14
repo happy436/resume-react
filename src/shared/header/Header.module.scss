@@ -96,6 +96,17 @@
     color: var(--first-color);
 }
 
+.language_btn{
+    margin-right:20px;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+
+    &:hover{
+        color: var(--first-color);
+    }
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 1024px) {

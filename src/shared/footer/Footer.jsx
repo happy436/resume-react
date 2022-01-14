@@ -12,16 +12,16 @@ export const Footer = (props) => {
             <div className={s.footer__bg}>
                 <div className={`${s.footer__container} ${v.container} ${v.grid}`}>
                     <div>
-                        <h1 className={s.footer__title}>Олег</h1>
-                        <span className={s.footer__subtitle}>Front-end dev</span>
+                        <h1 className={s.footer__title}>{props.language === 1 ? "Oleg" : "Олег"}</h1>
+                        <span className={s.footer__subtitle}>Front-end {props.language === 1 ? "developer" : "разработчик"}</span>
                     </div>
 
                     <ul className={s.footer__links}>
                         <li>
-                            <NavLink to={`${baseURL}/services`} className={s.footer__link}>Сервисы</NavLink>
+                            <NavLink to={`${baseURL}/services`} className={s.footer__link}>{props.language === 1 ? "Services" : "Сервисы"}</NavLink>
                         </li>
                         <li>
-                            <NavLink to={`${baseURL}/contact-me`} className={s.footer__link}>Контакты</NavLink>
+                            <NavLink to={`${baseURL}/contact-me`} className={s.footer__link}>{props.language === 1 ? "Contacts" : "Контакты"}</NavLink>
                         </li>
                     </ul>
                     <div className={s.footer__socials}>

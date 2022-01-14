@@ -1,7 +1,7 @@
 const CHANGE_LANGUAGE = "CHANGE_LANGUAGE"
 
 let initialState = {
-    language:["EN", "RU", "UKR"],
+    language:["RU", "ENG"],
     activeLanguage:0
 }
 

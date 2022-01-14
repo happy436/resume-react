@@ -8,22 +8,21 @@ import { Services } from './pages/services/Services';
 import { Skills } from './pages/skills/Skills';
 import s from "./App.module.scss"
 
-
-
 function App(props) {
 
     const baseURL = props.baseURL
+    window.state = props.state
 
     return (
         <main className={s.main}>
             <Routes>
-                <Route path={`${baseURL}/`} element={<Home baseURL={baseURL}/>} />
-                <Route path={`${baseURL}/about`} element={<About />} />
-                <Route path={`${baseURL}/skills`} element={<Skills />} />
-                <Route path={`${baseURL}/qualification`} element={<Qualification />} />
-                <Route path={`${baseURL}/services`} element={<Services />} />
-                <Route path={`${baseURL}/portfolio`} element={<Portfolio />} />
-                <Route path={`${baseURL}/contact-me`} element={<ContactMe />} />
+                <Route path={`${baseURL}/`} element={<Home language={props.state.activeLanguage} baseURL={baseURL}/>} />
+                <Route path={`${baseURL}/about`} element={<About language={props.state.activeLanguage}/>} />
+                <Route path={`${baseURL}/skills`} element={<Skills language={props.state.activeLanguage}/>} />
+                <Route path={`${baseURL}/qualification`} element={<Qualification language={props.state.activeLanguage}/>} />
+                <Route path={`${baseURL}/services`} element={<Services language={props.state.activeLanguage}/>} />
+                <Route path={`${baseURL}/portfolio`} element={<Portfolio language={props.state.activeLanguage}/>} />
+                <Route path={`${baseURL}/contact-me`} element={<ContactMe language={props.state.activeLanguage}/>} />
             </Routes>
         </main>
     );

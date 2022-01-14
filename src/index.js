@@ -13,9 +13,9 @@ let reRender = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <Header baseURL={baseURL}/>
-                <App store={store} baseURL={baseURL}/>
-                <Footer baseURL={baseURL}/>
+                <Header language={store.getState().languageReducer.activeLanguage} baseURL={baseURL} dispatch={store.dispatch}/>
+                <App state={store.getState().languageReducer} baseURL={baseURL}/>
+                <Footer language={store.getState().languageReducer.activeLanguage} baseURL={baseURL} />
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

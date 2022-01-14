@@ -44,11 +44,11 @@ export const Home = (props) => {
                         </svg>
                     </div>
                     <div className={s.data}>
-                        <h1 className={s.title}>Привет, я Олег</h1>
-                        <h3 className={s.subtitle}>Front-end developer</h3>
-                        <p className={s.description}>Опыт работы 01+ год</p>
+                        <h1 className={s.title}>{props.language === 1 ? "Hi, i'm Oleg" : "Привет, я Олег"}</h1>
+                        <h3 className={s.subtitle}>Front-end {props.language === 1 ? "developer" : "разработчик"}</h3>
+                        <p className={s.description}>{props.language === 1 ? "Middle level expirience in web" : "Опыт работы в вебе на среднем уровне"}</p>
                         <NavLink to={`${props.baseURL}/contact-me`} className={`${v.button} ${v.button__flex}`}>
-                            Контакты<UilMessage className={v.button__icon}/>
+                            {props.language === 1 ? "Contacts" : "Контакты"}<UilMessage className={v.button__icon}/>
                         </NavLink>
                     </div>
                 </div>

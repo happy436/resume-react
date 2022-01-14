@@ -9,7 +9,7 @@ export const Qualification = () => {
     const qualification_data = [{
         name:"Учеба",
         data_target:"education",
-        icon:<UilGraduationCap className={s.qualification__icon} />,
+        icon:<UilGraduationCap className={s.icon} />,
         data:[
             {
                 title:"HTML, CSS, JS",
@@ -30,7 +30,7 @@ export const Qualification = () => {
     },{
         name:"Работа",
         data_target:"work",
-        icon:<UilBriefcaseAlt className={s.qualification__icon} />,
+        icon:<UilBriefcaseAlt className={s.icon} />,
         data:[
             {
                 title:"Инженер-конструктор",
@@ -42,7 +42,7 @@ export const Qualification = () => {
         <section className={`${s.qualification} ${v.section}`}>
             <h2 className={v.section__title}>Квалификация</h2>
             <span className={v.section__subtitle}>Моя карьера</span>
-            <div className={`${s.qualification__container} ${v.container}`}>
+            <div className={`${s.container} ${v.container}`}>
                 <Container data={qualification_data}/>
             </div>
         </section>

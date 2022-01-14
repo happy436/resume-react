@@ -9,35 +9,35 @@ export const Item = (props) => {
     if (index % 2 === 0) {
         if (index === arr_length) {
             return (
-                <div className={s.qualification__data}>
+                <div className={s.data}>
                     <div className={s.history__item}>
-                        <h3 className={s.qualification__title}>{title}</h3>
-                        <span className={s.qualification__subtitle}>{subtitle}</span>
-                        <div className={s.qualification__calendar}>
+                        <h3 className={s.title}>{title}</h3>
+                        <span className={s.subtitle}>{subtitle}</span>
+                        <div className={s.calendar}>
                             <UilCalendarAlt />
                             {calendar}
                         </div>
                     </div>
                     <div>
-                        <span className={s.qualification__rounder}></span>
+                        <span className={s.rounder}></span>
                     </div>
                     <div></div>
                 </div>
             )
         }
         return (
-            <div className={s.qualification__data}>
+            <div className={s.data}>
                 <div className={s.history__item}>
-                    <h3 className={s.qualification__title}>{title}</h3>
-                    <span className={s.qualification__subtitle}>{subtitle}</span>
-                    <div className={s.qualification__calendar}>
+                    <h3 className={s.title}>{title}</h3>
+                    <span className={s.subtitle}>{subtitle}</span>
+                    <div className={s.calendar}>
                         <UilCalendarAlt />
                         {calendar}
                     </div>
                 </div>
                 <div>
-                    <span className={s.qualification__rounder}></span>
-                    <span className={s.qualification__line}></span>
+                    <span className={s.rounder}></span>
+                    <span className={s.line}></span>
                 </div>
                 <div></div>
             </div>
@@ -45,15 +45,15 @@ export const Item = (props) => {
     } else if (index % 2 === 1) {
         if (index === arr_length) {
             return (
-                <div className={s.qualification__data}>
+                <div className={s.data}>
                     <div></div>
                     <div>
-                        <span className={s.qualification__rounder}></span>
+                        <span className={s.rounder}></span>
                     </div>
                     <div className={s.history__item}>
-                        <h3 className={s.qualification__title}>{title}</h3>
-                        <span className={s.qualification__subtitle}>{subtitle}</span>
-                        <div className={s.qualification__calendar}>
+                        <h3 className={s.title}>{title}</h3>
+                        <span className={s.subtitle}>{subtitle}</span>
+                        <div className={s.calendar}>
                             <UilCalendarAlt />
                             {calendar}
                         </div>
@@ -62,16 +62,16 @@ export const Item = (props) => {
             )
         }
         return (
-            <div className={s.qualification__data}>
+            <div className={s.data}>
                 <div></div>
                 <div>
-                    <span className={s.qualification__rounder}></span>
-                    <span className={s.qualification__line}></span>
+                    <span className={s.rounder}></span>
+                    <span className={s.line}></span>
                 </div>
                 <div className={s.history__item}>
-                    <h3 className={s.qualification__title}>{title}</h3>
-                    <span className={s.qualification__subtitle}>{subtitle}</span>
-                    <div className={s.qualification__calendar}>
+                    <h3 className={s.title}>{title}</h3>
+                    <span className={s.subtitle}>{subtitle}</span>
+                    <div className={s.calendar}>
                         <UilCalendarAlt />
                         {calendar}
                     </div>

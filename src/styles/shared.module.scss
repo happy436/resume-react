@@ -37,7 +37,7 @@
     padding: 1rem;
     border-radius: 0.5rem;
     font-weight: var(--font-medium);
-    &hover {
+    &:hover {
         background-color: var(--first-color-alt);
     }
 }
@@ -72,6 +72,22 @@
     &hover {
         background-color: transparent;
         color: var(--first-color-alt);
+    }
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+    /* display: none; */
+    width: 0.6rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: 0.5rem;
+    &:hover {
+        background-color: var(--text-color-light);
     }
 }
 

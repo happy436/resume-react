@@ -6,7 +6,7 @@ import { Category } from './components/category/Category'
 
 const tech_skills = [
     {
-        icon: <UilBracketsCurly className={s.skills__icon} />,
+        icon: <UilBracketsCurly className={s.icon} />,
         name: "Front end developer",
         subtitle: "More than 1 years",
         skills:
@@ -19,7 +19,7 @@ const tech_skills = [
             ],
     },
     {
-        icon: <UilServerNetwork className={s.skills__icon} />,
+        icon: <UilServerNetwork className={s.icon} />,
         name: "Back end developer",
         subtitle: "0.5 year",
         skills:
@@ -28,7 +28,7 @@ const tech_skills = [
             ],
     },
     {
-        icon: <UilCube  className={s.skills__icon} />,
+        icon: <UilCube  className={s.icon} />,
         name: "3D modeling (for enginner)",
         subtitle: "More than 4 year",
         skills:
@@ -57,7 +57,7 @@ export const Skills = () => {
         <section className={`${s.skills} ${v.section}`}>
             <h2 className={v.section__title}>Навыки</h2>
             <span className={v.section__subtitle}>My technical level</span>
-            <div className={`${s.skills__container} ${v.container} ${v.grid}`}>
+            <div className={`${s.container} ${v.container} ${v.grid}`}>
                 {Categories}
             </div>
         </section>

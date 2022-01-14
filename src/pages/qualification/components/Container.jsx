@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import s from "../Qualification.module.scss"
-import { Tab } from './Tab'
+import { Tab } from './tab/Tab'
 import { History } from './history/History'
 
 export const Container = (props) => {
@@ -11,15 +11,15 @@ export const Container = (props) => {
 
     function Active(el) {
         setState(el.target.dataset.target)
-        let tabs = Array.from(document.getElementsByClassName(s.qualification__button))
+        let tabs = Array.from(document.getElementsByClassName(s.button))
 
         Array.from(tabs).forEach((tab) => {
             tabs.forEach(tab =>{
-                tab.classList.remove(s.qualification__active)
+                tab.classList.remove(s.active)
             })
         })
         const target = el.target
-        target.classList.add(s.qualification__active)
+        target.classList.add(s.active)
     }
 
     const TabElement = data.map((item) => {
@@ -39,10 +39,10 @@ export const Container = (props) => {
 
     return (
         <>
-            <div className={s.qualification__tabs}>
+            <div className={s.tabs}>
                 {TabElement}
             </div>
-            <div className={s.qualification__sections}>
+            <div className={s.sections}>
                 {content}
             </div>
         </>

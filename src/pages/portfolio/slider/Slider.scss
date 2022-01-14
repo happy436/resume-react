@@ -1,0 +1,38 @@
+.mySwiper.swiper-horizontal {
+    height:350px;
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        content: "";
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: var(--first-color);
+    }
+
+    .swiper-pagination-bullet {
+        background: var(--first-color-alt);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination-bullet {
+        outline: none;
+    }
+    .swiper_pagination_bullets {
+        bottom: -2.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .swiper_container_horizontal > .swiper_pagination_bullets {
+        bottom: -4.5rem;
+    }
+}
+
+@media screen and (max-width:568px){
+    .mySwiper.swiper-horizontal {
+        height:420px;
+    }
+}

@@ -1,8 +1,6 @@
 .footer {
     padding-top: 1rem;
-    bottom:0;
-    position:absolute;
-    width:100%
+    width:100%;
 }
 
 .footer__container {
@@ -11,7 +9,7 @@
 
 .footer__bg {
     background-color: var(--first-color-second);
-    padding: 1rem 0 2rem;
+    padding: 1rem 0 3rem;
 }
 
 .footer__title {
@@ -48,9 +46,7 @@
 }
 
 @media screen and (max-width:567px){
-    .footer{
-        position:relative;
-    }
+
 }
 
 @media screen and (min-width: 568px) {

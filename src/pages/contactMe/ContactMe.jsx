@@ -1,67 +1,58 @@
 import React from 'react'
 import v from "../../styles/shared.module.scss"
+import s from "./ContactMe.module.scss"
+import { UilInstagram, UilPhone , UilTelegramAlt, UilEnvelope, UilGithubAlt, UilMessage } from '@iconscout/react-unicons'
+import { ContactInfo } from "./ContactInfo"
 
 export const ContactMe = () => {
+
+    const contactInformation = [
+        {
+            title:"Напишите мне",
+            subtitle:"www.instagram.com/lelouch436",
+            icon:<UilInstagram className={s.contact__icon}/>,
+            link:"https://www.instagram.com/lelouch436",
+        },
+        {
+            title:"Напишите мне",
+            subtitle:"@happy436",
+            icon:<UilTelegramAlt className={s.contact__icon}/>,
+            link:"https://t.me/happy436",
+        },
+        {
+            title:"Напишите мне",
+            subtitle:"lelouch436@gmail.com",
+            icon:<UilEnvelope  className={s.contact__icon}/>,
+            link:"mailto:lelouch436@gmail.com",
+        },
+        {
+            title:"Позвони мне",
+            subtitle:"+380505758208",
+            icon:<UilPhone  className={s.contact__icon}/>,
+            link:"tel:+380505758208",
+        },
+    ]
+
+    const ContactElement = contactInformation.map(item => {
+        return(
+            <ContactInfo 
+                title={item.title}
+                subtitle={item.subtitle}
+                link={item.link}
+                icon={item.icon}
+            />
+        )
+    })
+
     return (
-        <section className={v.section}>Comming soon
-            {/* <h2 className="section__title">Контакты</h2>
-            <span className="section__subtitle">Связатся</span>
-
-            <div >
-                <div className="contact__container container grid">
-                    <div className="contact__information">
-                        <a href="https://www.instagram.com/kate_smile_sport" target="_blank" className="contact__information">
-                            <i className="uil uil-instagram contact__icon"></i>
-
-                            <div>
-                                <h3 className="contact__title">Напишите мне</h3>
-                                <span className="contact__subtitle">www.instagram.com/kate_smile_sport</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div className="contact__information">
-                        <i className="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 className="contact__title">Залы</h3>
-                            <span className="contact__subtitle">Fit4You</span>
-                            <span className="contact__subtitle"><br />улица Владимира Мономаха, 17а, Днепр</span>
-                            <span className="contact__subtitle"><br />проспект Гагарина, 105б, Днепр</span>
-                        </div>
-                    </div>
+        <section className={v.section}>
+            <h2 className={v.section__title}>Контакты</h2>
+            <span className={v.section__subtitle}>Связатся</span>
+            <div>
+                <div className={`${s.contact__container} ${v.container} ${v.grid}`}>
+                    {ContactElement}                    
                 </div>
-                <form className="contact__form grid"
-                    method="POST">
-
-                    <div className="contact__inputs grid">
-                        <div className="contact__content">
-                            <label for="" className="contact__label">Name</label>
-                            <input type="text" autocomplete="off" name="YPqjbf" className="contact__input" />
-                        </div>
-                        <div className="contact__content">
-                            <label for="" className="contact__label">Phone</label>
-                            <input type="tel" autocomplete="off" name="YPqjbf" className="contact__input" />
-                        </div>
-                    </div>
-                    <div className="contact__content">
-                        <label for="" className="contact__label">Project</label>
-                        <input type="text" autocomplete="off" className="contact__input" />
-                    </div>
-                    <div className="contact__content">
-                        <label for="" className="contact__label">Message</label>
-                        <textarea name="" id="" autocomplete="off" cols="0" rows="7" className="contact__input"></textarea>
-                    </div>
-
-                    <div>
-                        <a href="javascript: document.training.submit()" className="button button-flex">
-                            Send Message
-                            <i className="uil uil-message button__icon"></i>
-                        </a>
-                        <input type="hidden" name="act" value="order" />
-                    </div>
-                </form>
-            </div> */}
+            </div>
         </section>
     )
 }

@@ -1,26 +1,26 @@
-.about__info_items{
+.info_items{
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
 }
 
-.about__info_wrapper{
+.info_wrapper{
     display: flex;
     justify-content: center;
 }
 
-.about__info_title{
+.info_title{
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
 }
 
-.about__info_name{
+.info_name{
     font-size: var(--smaller-font-size);
 }
 
-.about__info_title,
-.about__info_name{
+.info_title,
+.info_name{
     display: block;
     text-align: center;
 }

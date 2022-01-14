@@ -21,7 +21,7 @@ export const History = (props) => {
     })
 
     return (
-        <div className={`${s.qualification__content}`}>
+        <div className={`${s.content}`}>
             {historyElements}
         </div>
     )

@@ -1,20 +1,20 @@
-.home__container {
+.container {
     gap: 1rem;
 }
 
-.home__content {
+.content {
     grid-template-columns: 0.5fr 3fr;
     padding-top: 3.5rem;
     align-items: center;
 }
 
-.home__social {
+.social {
     display: grid;
     grid-template-columns: max-content;
     row-gap: 1rem;
 }
 
-.home__social_icon {
+.social_icon {
     font-size: 1.25rem;
     color: var(--first-color);
     &hover {
@@ -22,40 +22,40 @@
     }
 }
 
-.home__blob {
+.blob {
     width: 200px;
     fill: var(--first-color);
 }
 
-.home__blob_img {
+.blob_img {
     width: 200px;
     height:300px;
 }
 
-.home__data {
+.data {
     grid-column: 2/2;
 }
 
-.home__title {
+.title {
     font-size: var(--big-font-size);
 }
 
-.home__subtitle {
+.subtitle {
     font-size: var(--h3-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
 
-.home__description {
+.description {
     margin-bottom: var(--mb-2);
 }
 
-.home__scroll {
+.scroll {
     display: none;
 }
 
-.home__scroll_button {
+.scroll_button {
     color: var(--first-color);
     transition: 0.3s;
     &hover {
@@ -63,18 +63,18 @@
     }
 }
 
-.home__scroll_mouse {
+.scroll_mouse {
     font-size: 2rem;
 }
 
-.home__scroll_name {
+.scroll_name {
     font-size: var(--small-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
     margin-right: var(--mb-0-25);
 }
 
-.home__scroll_arrow {
+.scroll_arrow {
     font-size: 1.25rem;
     animation: down 1s infinite;
 }
@@ -82,54 +82,54 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 350px) {
-    .home__content {
+    .content {
         grid-template-columns: 0.25fr 3fr;
     }
 
-    .home__blob {
+    .blob {
         width: 180px;
     }
 }
 
 @media screen and (min-width: 568px) {
-    .home__content {
+    .content {
         grid-template-columns: max-content 1fr 1fr;
     }
-    .home__data {
+    .data {
         grid-column: initial;
     }
 
-    .home__img {
+    .img {
         order: 1;
         justify-self: center;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .home__container {
+    .container {
         row-gap: 5rem;
     }
 
-    .home__content {
+    .content {
         padding-top: 5.5rem;
         column-gap: 2rem;
     }
-    .home__blob {
+    .blob {
         width: 270px;
     }
-    .home__scroll {
+    .scroll {
         display: block;
     }
-    .home__scroll-button {
+    .scroll-button {
         margin-left: 3rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .home__blob {
+    .blob {
         width: 320px;
     }
-    .home__social {
+    .social {
         transform: translateX(-6rem);
     }
 }

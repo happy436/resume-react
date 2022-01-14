@@ -13,25 +13,25 @@ export const Category = (props) => {
         )
     })
 
-    const skills__content = React.createRef()
+    const content = React.createRef()
 
     function Active(){
-        skills__content.current.classList.toggle(`${s.active}`)
+        content.current.classList.toggle(`${s.active}`)
     }
 
     return (
         
             <div>
-                <div className={s.skills__content} onClick={Active} ref={skills__content}>
-                    <div className={s.skills__header} >
+                <div className={s.content} onClick={Active} ref={content}>
+                    <div className={s.header} >
                         {category_icon}
                         <div>
-                            <h1 className={s.skills__title}>{category_name}</h1>
-                            <span className={s.skills__subtitle}>{category_subtitle}</span>
+                            <h1 className={s.title}>{category_name}</h1>
+                            <span className={s.subtitle}>{category_subtitle}</span>
                         </div>
-                        <UilAngleDown className={s.skills__arrow} />
+                        <UilAngleDown className={s.arrow} />
                     </div>
-                    <div className={`${s.skills__list} ${v.grid}`} >
+                    <div className={`${s.list} ${v.grid}`} >
                         {Skills}
                     </div>
                 </div>

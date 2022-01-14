@@ -9,7 +9,7 @@ export const AboutItem = (props) => {
     function ten() {
         if (count >= 10) {
             return (
-                <span className={`${s.about__info_title} ${s.count}`}>{
+                <span className={`${s.info_title} ${s.count}`}>{
                     <CountUp
                         className="account-balance"
                         start={0}
@@ -22,9 +22,9 @@ export const AboutItem = (props) => {
         } else {
             return (
                 <>
-                    <span className={s.about__info_title}>0</span>
+                    <span className={s.info_title}>0</span>
                     <span
-                        className={`${s.about__info_title} ${s.count}`}
+                        className={`${s.info_title} ${s.count}`}
                     >{
                         <CountUp
                         className="account-balance"
@@ -41,12 +41,12 @@ export const AboutItem = (props) => {
     }
 
     return (
-        <div className={s.about__info_item}>
-            <div className={s.about__info_wrapper}>
+        <div className={s.info_item}>
+            <div className={s.info_wrapper}>
                 {ten()}
-                <span className={s.about__info_title}>+</span>
+                <span className={s.info_title}>+</span>
             </div>
-            <span className={s.about__info_name}>{name}</span>
+            <span className={s.info_name}>{name}</span>
         </div>
     )
 }

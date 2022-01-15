@@ -16,6 +16,7 @@ export const Slider = (props) => {
         return (
             <SwiperSlide key={item.title}>
                 <Item
+                    language={props.language}
                     modules={[Pagination]}
                     title={item.title}
                     img={item.img}

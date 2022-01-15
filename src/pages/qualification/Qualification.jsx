@@ -4,10 +4,12 @@ import v from "../../styles/shared.module.scss"
 import { Container } from './components/Container'
 import { UilBriefcaseAlt, UilGraduationCap } from '@iconscout/react-unicons'
 
-export const Qualification = () => {
+export const Qualification = (props) => {
+
+    const language = props.language
 
     const qualification_data = [{
-        name:"Учеба",
+        name:language === 1 ? "Education" : "Учеба",
         data_target:"education",
         icon:<UilGraduationCap className={s.icon} />,
         data:[
@@ -17,7 +19,7 @@ export const Qualification = () => {
                 calendar:"01.06.2020 - 28.04.2021"
             },
             {
-                title:"Front-end for beginners",
+                title:language === 1 ? "Front-end for beginners" : "Front-end для начинающих",
                 subtitle:"Web Academy",
                 calendar:"28.04.2021 - 12.07.2021"
             },
@@ -28,20 +30,20 @@ export const Qualification = () => {
             },
         ]
     },{
-        name:"Работа",
+        name:language === 1 ? "Work" : "Работа",
         data_target:"work",
         icon:<UilBriefcaseAlt className={s.icon} />,
         data:[
             {
-                title:"Инженер-конструктор",
+                title:language === 1 ? "Design Engineer" : "Инженер-конструктор",
                 subtitle:"FlightControl",
-                calendar:"28.02.2018 - текущий момент"},
+                calendar:`28.02.2018 - ${language === 1 ? "to this day" : "текущий момент"}`},
         ]
     },]
     return (
         <section className={`${s.qualification} ${v.section}`}>
-            <h2 className={v.section__title}>Квалификация</h2>
-            <span className={v.section__subtitle}>Моя карьера</span>
+            <h2 className={v.section__title}>{language === 1 ? "Qualification" : "Квалификация"}</h2>
+            <span className={v.section__subtitle}>{language === 1 ? "My personal journey" : "Моя карьера"}</span>
             <div className={`${s.container} ${v.container}`}>
                 <Container data={qualification_data}/>
             </div>

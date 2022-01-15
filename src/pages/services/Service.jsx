@@ -6,7 +6,7 @@ import v from "../../styles/shared.module.scss"
 
 export const Service = (props) => {
 
-    const {title, icon, services} = props
+    const {title, icon, services, language} = props
 
     const serviceElement = services.map(item => {
         return(<Item key={item.item} service={item.item}/>)
@@ -24,9 +24,9 @@ export const Service = (props) => {
                 {icon}
                 <h3 className={s.title}>{title}</h3>
             </div>
-            <span onClick={ActiveModal} className={`${v.button} ${v.button__flex} ${v.button__small} ${v.button__link} ${s.button}`}>
-                Читать больше
-                <UilArrowRight className={v.button__icon} />
+            <span onClick={ActiveModal} className={`${v.button__flex} ${v.button__small} ${v.button__link} ${s.button}`}>
+                {language === 1 ? "Read more" : "Читать больше"}
+                <UilArrowRight className={s.button__icon} />
             </span>
             <div className={s.modal} ref={modalRef}>
                 <div className={s.modal_content}>

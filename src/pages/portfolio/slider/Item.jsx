@@ -4,7 +4,7 @@ import v from "../../../styles/shared.module.scss"
 import { UilArrowRight } from '@iconscout/react-unicons'
 
 export const Item = (props) => {
-    const {title, description, link, img} = props
+    const {title, description, link, img, language} = props
 
     return (
         <div className={`${s.portfolio__content} ${v.grid}`}>
@@ -15,7 +15,7 @@ export const Item = (props) => {
                     {description}
                 </p>
                 <a href={link} target="_blank" rel="noreferrer" className={`${v.button} ${v.button__flex} ${v.button__small} ${s.portfolio__button}`}>
-                    Demo
+                    {language === 1 ? "Demo" : "Демонстрация"}
                     <UilArrowRight className={s.button__icon} />
                 </a>
             </div>

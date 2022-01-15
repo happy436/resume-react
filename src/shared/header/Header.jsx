@@ -4,11 +4,12 @@ import { NavLink } from 'react-router-dom'
 import s from "./Header.module.scss"
 import shared from "../../styles/shared.module.scss"
 import { NavItems } from './components/NavItems/NavItems'
-import { ChangeTheme } from './components/changeTheme/ChangeTheme'
+import { ChangeTheme } from "./components/changeTheme/ChangeTheme"
 import { languageChangeActionCreator } from '../../redux/languageReducer'
 
+
 export const Header = (props) => {
-    const {baseURL, language} = props
+    const {baseURL, language, theme, dispatch} = props
 
     function toggleMenu(){
         let menu = document.getElementById("nav-menu")
@@ -16,7 +17,7 @@ export const Header = (props) => {
     }
 
     function Language(){
-        return props.dispatch(languageChangeActionCreator())
+        return dispatch(languageChangeActionCreator())
     }
 
     return (
@@ -29,7 +30,10 @@ export const Header = (props) => {
                 </div>
                 <div className={s.nav__btns}>
                     <div className={s.language_btn} onClick={Language}>{language === 1 ? "ENG" : "RU"}</div>
-                    {<ChangeTheme />}
+                    {<ChangeTheme 
+                        dispatch={dispatch}
+                        theme={theme}
+                    />}
                     <div className={s.nav__toggle} onClick={toggleMenu} id="nav-toggle">
                         <UilApps />
                     </div>

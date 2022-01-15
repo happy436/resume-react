@@ -11,7 +11,6 @@ import s from "./App.module.scss"
 function App(props) {
 
     const baseURL = props.baseURL
-    window.state = props.state
 
     return (
         <main className={s.main}>

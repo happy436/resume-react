@@ -18,7 +18,7 @@ const tech_skills_ENG = [
                 { name: "React", percentage: "30%" },
             ],
     },
-    {
+    /* {
         icon: <UilServerNetwork className={s.icon} />,
         name: "Back end developer",
         subtitle: "0.5 year",
@@ -26,7 +26,7 @@ const tech_skills_ENG = [
             [
                 { name: "Node Js", percentage: "10%" },
             ],
-    },
+    }, */
     {
         icon: <UilCube  className={s.icon} />,
         name: "3D modeling (for enginner)",
@@ -55,7 +55,7 @@ const tech_skills_RU = [
                 { name: "React", percentage: "30%" },
             ],
     },
-    {
+    /* {
         icon: <UilServerNetwork className={s.icon} />,
         name: "Back end разработчик",
         subtitle: "Пол года",
@@ -63,7 +63,7 @@ const tech_skills_RU = [
             [
                 { name: "Node Js", percentage: "10%" },
             ],
-    },
+    }, */
     {
         icon: <UilCube  className={s.icon} />,
         name: "3D моделировани (для инженеров)",

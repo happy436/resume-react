@@ -2,6 +2,7 @@ import React from 'react'
 import s from "./About.module.scss"
 import shared from "../../styles/shared.module.scss"
 import { AboutItems } from './components/Items/AboutItems'
+import { PDFButton } from './components/PDF/PDFButton'
 
 export const About = (props) => {
 
@@ -24,6 +25,7 @@ export const About = (props) => {
                         </ul>
                     </p>
                     <AboutItems language={props.language}/>
+                    <PDFButton language={props.language}/>
                 </div>
             </div>
         </section>

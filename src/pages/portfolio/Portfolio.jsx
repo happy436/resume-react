@@ -28,7 +28,7 @@ export const Portfolio = (props) => {
             img: demo3,
             title: language === 1 ? "Clock App" : "Приложение часы",
             description: language === 1 ? "Clock app with multiple color styles and functionalities, from analog to calendar" : "Приложение часов с несколькими цветовыми стилями и функциями, от аналоговых до календаря",
-            link: "https://happy436.github.io/todo-app-react/"
+            link: "https://happy436.github.io/clocks-react/"
         },
         {
             img: demo4,

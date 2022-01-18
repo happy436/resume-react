@@ -28,7 +28,7 @@ export const ContactMe = (props) => {
             link:"mailto:lelouch436@gmail.com",
         },
         {
-            title:language === 1 ? "Call me" : "Позвони мне",
+            title:language === 1 ? "Call me" : "Позвоните мне",
             subtitle:"+380505758208",
             icon:<UilPhone  className={s.contact__icon}/>,
             link:"tel:+380505758208",

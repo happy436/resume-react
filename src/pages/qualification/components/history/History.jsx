@@ -1,5 +1,4 @@
 import React from 'react'
-import { UilCalendarAlt } from '@iconscout/react-unicons'
 import s from "../../Qualification.module.scss"
 import { Item } from './Item'
 

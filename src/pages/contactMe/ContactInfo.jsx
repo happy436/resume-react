@@ -7,7 +7,7 @@ export const ContactInfo = (props) => {
 
     return (
         <div className={s.contact__information}>
-            <a href={link} target="_blank" className={s.contact__information}>
+            <a href={link} target="_blank" rel="noreferrer" className={s.contact__information}>
                 {icon}
                 <div>
                     <h3 className={s.contact__title}>{title}</h3>

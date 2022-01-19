@@ -1,7 +1,7 @@
 import React from 'react'
 import s from "./Skills.module.scss"
 import v from "../../styles/shared.module.scss"
-import { UilBracketsCurly, UilServerNetwork, UilCube } from '@iconscout/react-unicons'
+import { UilBracketsCurly, UilCube } from '@iconscout/react-unicons'
 import { Category } from './components/category/Category'
 
 const tech_skills_ENG = [

@@ -1,7 +1,7 @@
 import React from 'react'
 import s from "./Footer.module.scss"
 import v from "../../styles/shared.module.scss"
-import { UilInstagram, UilFacebookF, UilTelegramAlt, UilGithubAlt, UilMessage } from '@iconscout/react-unicons'
+import { UilInstagram, UilFacebookF, UilTelegramAlt, UilGithubAlt } from '@iconscout/react-unicons'
 import { NavLink } from 'react-router-dom'
 
 export const Footer = (props) => {

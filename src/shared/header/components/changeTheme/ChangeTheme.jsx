@@ -12,10 +12,10 @@ export const ChangeTheme = (props) => {
     }
 
     function changeBtn(){
-        if(theme === 1){
+        if(theme === 0 && window.matchMedia('(prefers-color-scheme: dark').matches){
             document.getElementsByTagName('body')[0].classList.add("dark-theme")
             return <UilSun className={s.change_theme} onClick={changeTheme}/>
-        } else{
+        } else if(theme === 1 || window.matchMedia('(prefers-color-scheme: light').matches){
             document.getElementsByTagName('body')[0].classList.remove("dark-theme")
             return <UilMoon className={s.change_theme} onClick={changeTheme}/>
         }

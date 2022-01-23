@@ -30,6 +30,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 const baseURL = ""
+window.state = store.getState()
 
 let reRender = (state) => {
     ReactDOM.render(

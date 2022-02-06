@@ -3,6 +3,7 @@ import s from "./About.module.scss"
 import shared from "../../styles/shared.module.scss"
 import { AboutItems } from './components/Items/AboutItems'
 import { PDFButton } from './components/PDF/PDFButton'
+import photo from "../../assets/img/about.jpg"
 
 export const About = (props) => {
 
@@ -11,9 +12,9 @@ export const About = (props) => {
             <h2 className={shared.section__title}>{props.language === 1 ? "About me" : "Обо мне"}</h2>
             <span className={shared.section__subtitle}></span>
             <div className={`${s.container} ${shared.container} ${shared.grid}`}>
-                <img src="https://scontent.fiev19-1.fna.fbcdn.net/v/t1.18169-9/14517510_2106931546198201_8647244855771071814_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=174925&_nc_ohc=kOtPHfTRGWsAX-bzi38&_nc_ht=scontent.fiev19-1.fna&oh=00_AT-YK7ZDrNHbXBS3QcECxFx-tQpL1WVE8G4CTOErQ-TLKQ&oe=61FC956F" alt="about" className={s.img}/>
+                <img src={photo} alt="about" className={s.img}/>
                 <div className={s.data}>
-                    <p className={s.description}>
+                    <div className={s.description}>
                         {props.language === 1 ? 
                         "Web-developer, currently without expirience in the company." : 
                         "Веб-разработчик, на данных момент без опыта работы в компании. "}
@@ -23,7 +24,7 @@ export const About = (props) => {
                             <li>Redux</li>
                             <li>JavaScript</li>
                         </ul>
-                    </p>
+                    </div>
                     <AboutItems language={props.language}/>
                     <PDFButton language={props.language}/>
                 </div>

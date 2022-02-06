@@ -3,6 +3,7 @@ import s from "./Home.module.scss"
 import v from "../../styles/shared.module.scss"
 import { UilInstagram, UilFacebookF, UilTelegramAlt, UilGithubAlt, UilMessage } from '@iconscout/react-unicons'
 import { NavLink } from 'react-router-dom'
+import photo from "../../assets/img/main_photo.jpg"
 
 export const Home = (props) => {
     return (
@@ -39,7 +40,7 @@ export const Home = (props) => {
                                 <image className={s.blob_img} 
                                 alt="ava" 
                                 y="-50"
-                                xlinkHref="https://scontent.fiev19-1.fna.fbcdn.net/v/t31.18172-8/14500285_2106932076198148_3144363199451259631_o.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=9aaPXXuJSqoAX8kN3wP&_nc_ht=scontent.fiev19-1.fna&oh=00_AT9vBq8pmGkMHsKmW-21C9AHFwcQFWLk82fTfXjj437qsA&oe=61FC3CED"/>
+                                xlinkHref={photo}/>
                             </g>
                         </svg>
                     </div>

@@ -8,8 +8,7 @@ import { ChangeTheme } from "./components/changeTheme/ChangeTheme"
 import { languageChangeActionCreator } from '../../redux/languageReducer'
 
 
-export const Header = (props) => {
-    const {baseURL, language, theme, dispatch} = props
+export const Header = ({baseURL, language, theme, dispatch}) => {
 
     function toggleMenu(){
         let menu = document.getElementById("nav-menu")

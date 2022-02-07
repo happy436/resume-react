@@ -9,7 +9,7 @@ const themeReducer = (state = initialState, action) => {
     
     switch(action.type){
         case CHANGE_THEME:
-            if(state.activeTheme < state.themes.length - 1){
+            if(state.activeTheme === 0){
                 state.activeTheme++
                 return state
             } else {

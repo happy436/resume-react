@@ -1,10 +1,9 @@
-import React from 'react'
-import { UilCalendarAlt } from '@iconscout/react-unicons'
+import React from "react"
+import { UilCalendarAlt } from "@iconscout/react-unicons"
 import s from "../../Qualification.module.scss"
 
-export const Item = (props) => {
-
-    const {index, arr_length, title, subtitle, calendar} = props
+export const Item = props => {
+    const { index, arr_length, title, subtitle, calendar } = props
 
     if (index % 2 === 0) {
         if (index === arr_length) {

@@ -34,7 +34,7 @@
 }
 
 @media screen and (min-width: 568px) {
-    .portfolio__content{
+    .portfolio__content {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -53,7 +53,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-
     .portfolio__content {
         column-gap: 5rem;
     }

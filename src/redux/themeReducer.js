@@ -1,15 +1,14 @@
 const CHANGE_THEME = "CHANGE_THEME"
 
 let initialState = {
-    themes:["dark", "light"],
-    activeTheme:0
+    themes: ["dark", "light"],
+    activeTheme: 0
 }
 
 const themeReducer = (state = initialState, action) => {
-    
-    switch(action.type){
+    switch (action.type) {
         case CHANGE_THEME:
-            if(state.activeTheme === 0){
+            if (state.activeTheme === 0) {
                 state.activeTheme++
                 return state
             } else {
@@ -19,11 +18,10 @@ const themeReducer = (state = initialState, action) => {
         default:
             return state
     }
-    
 }
 
 export const themeChangeActionCreator = () => {
-    return{
+    return {
         type: CHANGE_THEME
     }
 }

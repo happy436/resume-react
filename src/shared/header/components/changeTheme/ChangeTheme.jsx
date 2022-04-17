@@ -1,39 +1,34 @@
-import React, { useEffect } from 'react'
-import { UilMoon, UilSun } from '@iconscout/react-unicons'
+import React, { useEffect } from "react"
+import { UilMoon, UilSun } from "@iconscout/react-unicons"
 import s from "../../Header.module.scss"
-import { themeChangeActionCreator } from '../../../../redux/themeReducer'
+import { themeChangeActionCreator } from "../../../../redux/themeReducer"
 
-export const ChangeTheme = (props) => {
-
-    const {theme, dispatch} = props
+export const ChangeTheme = props => {
+    const { theme, dispatch } = props
 
     useEffect(() => {
-        if(window.matchMedia('(prefers-color-scheme: dark').matches){
+        if (window.matchMedia("(prefers-color-scheme: dark").matches) {
             document.body.classList.toggle("dark-theme")
-        } else if(window.matchMedia('(prefers-color-scheme: light').matches){
+        } else if (window.matchMedia("(prefers-color-scheme: light").matches) {
             document.body.classList.toggle("dark-theme")
-            if(theme === 0){
+            if (theme === 0) {
                 changeTheme()
             }
         }
-    },[])
+    }, [])
 
-    function changeTheme(){
+    function changeTheme() {
         document.body.classList.toggle("dark-theme")
         return dispatch(themeChangeActionCreator())
     }
 
-    function changeBtn(){
-        if(theme === 0){
-            return <UilSun className={s.change_theme} onClick={changeTheme}/>
-        } else{
-            return <UilMoon className={s.change_theme} onClick={changeTheme}/>
+    function changeBtn() {
+        if (theme === 0) {
+            return <UilSun className={s.change_theme} onClick={changeTheme} />
+        } else {
+            return <UilMoon className={s.change_theme} onClick={changeTheme} />
         }
     }
 
-    return (
-        <>
-            {changeBtn()}
-        </>
-    )
+    return <>{changeBtn()}</>
 }

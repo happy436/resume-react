@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react"
 import s from "../../../Skills.module.scss"
 
-export const Skill = (props) => {
+export const Skill = props => {
     const { name, percentage } = props
 
     return (
@@ -11,7 +11,10 @@ export const Skill = (props) => {
                 <span className={s.number}>{percentage}</span>
             </div>
             <div className={s.bar}>
-                <span className={s.percentage} style={{ width: `${percentage}` }}></span>
+                <span
+                    className={s.percentage}
+                    style={{ width: `${percentage}` }}
+                ></span>
             </div>
         </div>
     )

@@ -1,16 +1,24 @@
 import React from "react"
 import s from "../Qualification.module.scss"
 import v from "../../../styles/shared.module.scss"
+import PropTypes from "prop-types"
 
-export const Tab = props => {
+export const Tab = ({ Active, dataTarget, icon, name }) => {
     return (
         <div
             className={`${s.qualification__button} ${v.button__flex}`}
-            onClick={props.Active}
-            data-target={props.data_target}
+            onClick={Active}
+            data-target={dataTarget}
         >
-            {props.icon}
-            {props.name}
+            {icon}
+            {name}
         </div>
     )
+}
+
+Tab.propTypes = {
+    Active: PropTypes.func,
+    dataTarget: PropTypes,
+    icon: PropTypes.any,
+    name: PropTypes.string
 }

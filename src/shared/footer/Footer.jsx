@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import s from "./Footer.module.scss"
 import v from "../../styles/shared.module.scss"
 import {
@@ -8,9 +8,10 @@ import {
     UilGithubAlt
 } from "@iconscout/react-unicons"
 import { NavLink } from "react-router-dom"
+import Context from "../../context"
 
 export const Footer = props => {
-    const baseURL = props.baseURL
+    const { baseURL, language } = useContext(Context)
     return (
         <footer className={s.footer}>
             <div className={s.footer__bg}>
@@ -19,11 +20,11 @@ export const Footer = props => {
                 >
                     <div>
                         <h1 className={s.footer__title}>
-                            {props.language === 1 ? "Oleg" : "Олег"}
+                            {language === 1 ? "Oleg" : "Олег"}
                         </h1>
                         <span className={s.footer__subtitle}>
                             Front-end{" "}
-                            {props.language === 1 ? "developer" : "разработчик"}
+                            {language === 1 ? "developer" : "разработчик"}
                         </span>
                     </div>
 
@@ -33,7 +34,7 @@ export const Footer = props => {
                                 to={`${baseURL}/services`}
                                 className={s.footer__link}
                             >
-                                {props.language === 1 ? "Services" : "Сервисы"}
+                                {language === 1 ? "Services" : "Сервисы"}
                             </NavLink>
                         </li>
                         <li>
@@ -41,7 +42,7 @@ export const Footer = props => {
                                 to={`${baseURL}/contact-me`}
                                 className={s.footer__link}
                             >
-                                {props.language === 1 ? "Contacts" : "Контакты"}
+                                {language === 1 ? "Contacts" : "Контакты"}
                             </NavLink>
                         </li>
                     </ul>

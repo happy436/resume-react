@@ -69,7 +69,7 @@ export const Portfolio = props => {
                 {language === 1 ? "Most recent work" : "Самые последние работы"}
             </span>
             <div className={`${s.portfolio__container} ${v.container}`}>
-                <Slider data={data} language={language} />
+                <Slider data={data} />
             </div>
         </section>
     )

@@ -1,13 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import { UilBrowser, UilCube } from "@iconscout/react-unicons"
 import s from "./Services.module.scss"
 import v from "../../styles/shared.module.scss"
 import { Service } from "./Service"
+import Context from "../../context"
 
 export const Services = props => {
-    const language = props.language
+    const language = useContext(Context)
 
-    const services_list = [
+    const servicesList = [
         {
             title: language === 1 ? "Website development" : "Создание сайта",
             icon: <UilBrowser className={s.icon} />,
@@ -76,14 +77,13 @@ export const Services = props => {
         }
     ]
 
-    const servicesElement = services_list.map(item => {
+    const servicesElement = servicesList.map(item => {
         return (
             <Service
                 key={item.title}
                 title={item.title}
                 icon={item.icon}
                 services={item.services}
-                language={language}
             />
         )
     })

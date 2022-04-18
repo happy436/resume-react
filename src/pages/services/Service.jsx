@@ -1,11 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import { UilTimes, UilArrowRight } from "@iconscout/react-unicons"
 import { Item } from "./Item"
 import s from "./Services.module.scss"
 import v from "../../styles/shared.module.scss"
+import PropTypes from "prop-types"
+import Context from "../../context"
 
 export const Service = props => {
-    const { title, icon, services, language } = props
+    const { title, icon, services } = props
+    const { language } = useContext(Context)
 
     const serviceElement = services.map(item => {
         return <Item key={item.item} service={item.item} />
@@ -41,4 +44,10 @@ export const Service = props => {
             </div>
         </div>
     )
+}
+
+Service.propTypes = {
+    title: PropTypes.string,
+    icon: PropTypes.any,
+    services: PropTypes.array
 }

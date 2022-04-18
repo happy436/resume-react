@@ -6,11 +6,11 @@ const persistedState = localStorage.getItem("reduxState")
     ? JSON.parse(localStorage.getItem("reduxState"))
     : {}
 
-let reducers = combineReducers({
+const reducers = combineReducers({
     themeReducer,
     languageReducer
 })
 
-let store = createStore(reducers, persistedState)
+const store = createStore(reducers, persistedState)
 
 export default store

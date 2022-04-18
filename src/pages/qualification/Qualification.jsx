@@ -1,16 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import s from "./Qualification.module.scss"
 import v from "../../styles/shared.module.scss"
 import { Container } from "./components/Container"
 import { UilBriefcaseAlt, UilGraduationCap } from "@iconscout/react-unicons"
+import Context from "../../context"
 
 export const Qualification = props => {
-    const language = props.language
+    const { language } = useContext(Context)
 
-    const qualification_data = [
+    const qualificationData = [
         {
             name: language === 1 ? "Education" : "Учеба",
-            data_target: "education",
+            dataTarget: "education",
             icon: <UilGraduationCap className={s.icon} />,
             data: [
                 {
@@ -60,7 +61,7 @@ export const Qualification = props => {
                 {language === 1 ? "My personal journey" : "Моя карьера"}
             </span>
             <div className={`${s.container} ${v.container}`}>
-                <Container data={qualification_data} />
+                <Container data={qualificationData} />
             </div>
         </section>
     )

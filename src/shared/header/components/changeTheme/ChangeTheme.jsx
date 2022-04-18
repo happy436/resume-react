@@ -1,10 +1,11 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import { UilMoon, UilSun } from "@iconscout/react-unicons"
 import s from "../../Header.module.scss"
 import { themeChangeActionCreator } from "../../../../redux/themeReducer"
+import Context from "../../../../context"
 
 export const ChangeTheme = props => {
-    const { theme, dispatch } = props
+    const { theme, dispatch } = useContext(Context)
 
     useEffect(() => {
         if (window.matchMedia("(prefers-color-scheme: dark").matches) {

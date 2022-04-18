@@ -2,15 +2,15 @@ import React, { useState } from "react"
 import { UilCalendarAlt } from "@iconscout/react-unicons"
 import s from "../../Qualification.module.scss"
 import { Tab } from "./Tab"
+import PropTypes from "prop-types"
 
-export const Tabs = props => {
-    const data = props.data
+export const Tabs = data => {
     const [state, setState] = useState()
     window.state = state
 
     function Active(el) {
         setState(el.target.dataset.target)
-        let tabs = Array.from(document.getElementsByClassName(s.button))
+        const tabs = Array.from(document.getElementsByClassName(s.button))
 
         Array.from(tabs).forEach(tab => {
             tabs.forEach(tab => {
@@ -30,7 +30,7 @@ export const Tabs = props => {
                 name={item.name}
                 icon={item.icon}
                 key={item.name}
-                data_target={item.data_target}
+                dataTarget={item.dataTarget}
             />
         )
     })
@@ -127,7 +127,7 @@ export const Tabs = props => {
                             Инструктор направления Stretching
                         </h3>
                         <span className={s.subtitle}>
-                            студия "Step by Step"
+                            студия `&quot;`Step by Step`&quot;`
                         </span>
                         <div className={s.calendar}>
                             <UilCalendarAlt />
@@ -150,10 +150,10 @@ export const Tabs = props => {
                     <div>
                         <h3 className={s.title}>
                             Семинар <br />
-                            "Stretching"
+                            `&quot;`Stretching`&quot;`
                         </h3>
                         <span className={s.subtitle}>
-                            Академией фитнеса и танцев "Master"
+                            Академией фитнеса и танцев `&quot;`Master`&quot;`
                         </span>
                         <div className={s.calendar}>
                             <UilCalendarAlt />
@@ -171,4 +171,8 @@ export const Tabs = props => {
             <div className={s.sections}>{content}</div>
         </>
     )
+}
+
+Tabs.propTypes = {
+    data: PropTypes.array
 }

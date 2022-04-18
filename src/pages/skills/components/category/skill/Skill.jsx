@@ -1,5 +1,6 @@
 import React from "react"
 import s from "../../../Skills.module.scss"
+import PropTypes from "prop-types"
 
 export const Skill = props => {
     const { name, percentage } = props
@@ -18,4 +19,9 @@ export const Skill = props => {
             </div>
         </div>
     )
+}
+
+Skill.propTypes = {
+    name: PropTypes.string,
+    percentage: PropTypes.string
 }

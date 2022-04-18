@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import s from "./Skills.module.scss"
 import v from "../../styles/shared.module.scss"
 import { UilBracketsCurly, UilCube } from "@iconscout/react-unicons"
 import { Category } from "./components/category/Category"
+import Context from "../../context"
 
-const tech_skills_ENG = [
+const techSkillsENG = [
     {
         icon: <UilBracketsCurly className={s.icon} />,
         name: "Front end developer",
@@ -39,7 +40,7 @@ const tech_skills_ENG = [
     }
 ]
 
-const tech_skills_RU = [
+const techSkillsRU = [
     {
         icon: <UilBracketsCurly className={s.icon} />,
         name: "Front end разработчик",
@@ -75,32 +76,34 @@ const tech_skills_RU = [
 ]
 
 export const Skills = props => {
+    const { language } = useContext(Context)
     const Categories = Language().map(category => {
         return (
             <Category
-                category_icon={category.icon}
-                category_name={category.name}
-                category_subtitle={category.subtitle}
+                key={category.name}
+                categoryIcon={category.icon}
+                categoryName={category.name}
+                categorySubtitle={category.subtitle}
                 skills={category.skills}
             />
         )
     })
 
     function Language() {
-        if (props.language === 1) {
-            return tech_skills_ENG
+        if (language === 1) {
+            return techSkillsENG
         } else {
-            return tech_skills_RU
+            return techSkillsRU
         }
     }
 
     return (
         <section className={`${s.skills} ${v.section}`}>
             <h2 className={v.section__title}>
-                {props.language === 1 ? "Skills" : "Навыки"}
+                {language === 1 ? "Skills" : "Навыки"}
             </h2>
             <span className={v.section__subtitle}>
-                {props.language === 1
+                {language === 1
                     ? "My technical level"
                     : "Мой технический уровень"}
             </span>

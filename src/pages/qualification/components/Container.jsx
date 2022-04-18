@@ -2,16 +2,15 @@ import React, { useState } from "react"
 import s from "../Qualification.module.scss"
 import { Tab } from "./tab/Tab"
 import { History } from "./history/History"
+import PropTypes from "prop-types"
 
-export const Container = props => {
-    const data = props.data
+export const Container = data => {
     const [state, setState] = useState()
     let content
-    window.data = data
 
     function Active(el) {
         setState(el.target.dataset.target)
-        let tabs = Array.from(document.getElementsByClassName(s.button))
+        const tabs = Array.from(document.getElementsByClassName(s.button))
 
         Array.from(tabs).forEach(tab => {
             tabs.forEach(tab => {
@@ -29,7 +28,7 @@ export const Container = props => {
                 name={item.name}
                 icon={item.icon}
                 key={item.name}
-                data_target={item.data_target}
+                dataTarget={item.dataTarget}
             />
         )
     })
@@ -46,4 +45,8 @@ export const Container = props => {
             <div className={s.sections}>{content}</div>
         </>
     )
+}
+
+Container.propTypes = {
+    data: PropTypes.array
 }

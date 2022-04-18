@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import {
     UilEstate,
     UilUser,
@@ -11,51 +11,53 @@ import {
 import { NavLink } from "react-router-dom"
 import s from "../../Header.module.scss"
 import shared from "../../../../styles/shared.module.scss"
+import Context from "../../../../context"
+import PropTypes from "prop-types"
 
-export const NavItems = props => {
-    const baseURL = props.baseURL
-    const nav_items_data = [
+export const NavItems = toggleMenu => {
+    const { baseURL, language } = useContext(Context)
+    const navItemsData = [
         {
-            name: props.language === 1 ? "Home" : "Главная",
+            name: language === 1 ? "Home" : "Главная",
             url: "",
             icon: <UilEstate className={s.nav__icon} />
         },
         {
-            name: props.language === 1 ? "About" : "Обо мне",
+            name: language === 1 ? "About" : "Обо мне",
             url: "about",
             icon: <UilUser className={s.nav__icon} />
         },
         {
-            name: props.language === 1 ? "Skills" : "Навыки",
+            name: language === 1 ? "Skills" : "Навыки",
             url: "skills",
             icon: <UilFileAlt className={s.nav__icon} />
         },
         {
-            name: props.language === 1 ? "Qualification" : "Квалификация",
+            name: language === 1 ? "Qualification" : "Квалификация",
             url: "qualification",
             icon: <UilComparison className={s.nav__icon} />
         },
         {
-            name: props.language === 1 ? "Services" : "Сервис",
+            name: language === 1 ? "Services" : "Сервис",
             url: "services",
             icon: <UilDollarSign className={s.nav__icon} />
         },
         {
-            name: props.language === 1 ? "Portfolio" : "Портфолио",
+            name: language === 1 ? "Portfolio" : "Портфолио",
             url: "portfolio",
             icon: <UilBriefcaseAlt className={s.nav__icon} />
         },
         {
-            name: props.language === 1 ? "Contacts" : "Контакты",
+            name: language === 1 ? "Contacts" : "Контакты",
             url: "contact-me",
             icon: <UilMessage className={s.nav__icon} />
         }
     ]
-    const nav_item_el = nav_items_data.map(item => {
+    const navItemEl = navItemsData.map(item => {
         return (
             <li key={item.name} className={s.nav__item}>
                 <NavLink
-                    onClick={props.toggleMenu}
+                    onClick={toggleMenu}
                     to={`${baseURL}/${item.url}`}
                     className={({ isActive }) =>
                         isActive
@@ -68,5 +70,9 @@ export const NavItems = props => {
             </li>
         )
     })
-    return <ul className={`${s.nav__list} ${shared.grid}`}>{nav_item_el}</ul>
+    return <ul className={`${s.nav__list} ${shared.grid}`}>{navItemEl}</ul>
+}
+
+NavItems.propTypes = {
+    toggleMenu: PropTypes.func
 }

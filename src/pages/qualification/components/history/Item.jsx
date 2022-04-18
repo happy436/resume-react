@@ -1,12 +1,13 @@
 import React from "react"
 import { UilCalendarAlt } from "@iconscout/react-unicons"
 import s from "../../Qualification.module.scss"
+import PropTypes from "prop-types"
 
 export const Item = props => {
-    const { index, arr_length, title, subtitle, calendar } = props
+    const { index, arrLength, title, subtitle, calendar } = props
 
     if (index % 2 === 0) {
-        if (index === arr_length) {
+        if (index === arrLength) {
             return (
                 <div className={s.data}>
                     <div className={s.history__item}>
@@ -42,7 +43,7 @@ export const Item = props => {
             </div>
         )
     } else if (index % 2 === 1) {
-        if (index === arr_length) {
+        if (index === arrLength) {
             return (
                 <div className={s.data}>
                     <div></div>
@@ -78,4 +79,12 @@ export const Item = props => {
             </div>
         )
     }
+}
+
+Item.propTypes = {
+    index: PropTypes.number,
+    arrLength: PropTypes.number,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    calendar: PropTypes.string
 }

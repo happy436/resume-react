@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import s from "../Portfolio.module.scss"
 import v from "../../../styles/shared.module.scss"
 import { UilArrowRight } from "@iconscout/react-unicons"
+import PropTypes from "prop-types"
+import Context from "../../../context"
 
 export const Item = props => {
-    const { title, description, link, img, language } = props
+    const { title, description, link, img } = props
+    const { language } = useContext(Context)
 
     return (
         <div className={`${s.portfolio__content} ${v.grid}`}>
@@ -28,4 +31,11 @@ export const Item = props => {
             </div>
         </div>
     )
+}
+
+Item.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+    link: PropTypes.string,
+    img: PropTypes.any
 }

@@ -3,9 +3,10 @@ import s from "../../Skills.module.scss"
 import v from "../../../../styles/shared.module.scss"
 import { UilAngleDown } from "@iconscout/react-unicons"
 import { Skill } from "./skill/Skill"
+import PropTypes from "prop-types"
 
 export const Category = props => {
-    const { category_icon, category_name, category_subtitle, skills } = props
+    const { categoryIcon, categoryName, categorySubtitle, skills } = props
 
     const Skills = skills.map(item => {
         return (
@@ -27,10 +28,10 @@ export const Category = props => {
         <div>
             <div className={s.content} onClick={Active} ref={content}>
                 <div className={s.header}>
-                    {category_icon}
+                    {categoryIcon}
                     <div>
-                        <h1 className={s.title}>{category_name}</h1>
-                        <span className={s.subtitle}>{category_subtitle}</span>
+                        <h1 className={s.title}>{categoryName}</h1>
+                        <span className={s.subtitle}>{categorySubtitle}</span>
                     </div>
                     <UilAngleDown className={s.arrow} />
                 </div>
@@ -38,4 +39,11 @@ export const Category = props => {
             </div>
         </div>
     )
+}
+
+Category.propTypes = {
+    categoryIcon: PropTypes.any,
+    categoryName: PropTypes.string,
+    categorySubtitle: PropTypes.string,
+    skills: PropTypes.array
 }

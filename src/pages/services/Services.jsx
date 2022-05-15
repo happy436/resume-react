@@ -5,8 +5,8 @@ import v from "../../styles/shared.module.scss"
 import { Service } from "./Service"
 import Context from "../../context"
 
-export const Services = props => {
-    const language = useContext(Context)
+export const Services = () => {
+    const { language } = useContext(Context)
 
     const servicesList = [
         {

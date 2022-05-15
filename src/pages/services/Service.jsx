@@ -6,12 +6,11 @@ import v from "../../styles/shared.module.scss"
 import PropTypes from "prop-types"
 import Context from "../../context"
 
-export const Service = props => {
-    const { title, icon, services } = props
+export const Service = ({ title, icon, services }) => {
     const { language } = useContext(Context)
 
-    const serviceElement = services.map(item => {
-        return <Item key={item.item} service={item.item} />
+    const serviceElement = services.map(service => {
+        return <Item key={service.item} service={service.item} />
     })
 
     const modalRef = React.createRef()
@@ -38,7 +37,7 @@ export const Service = props => {
                     <h4 className={s.modal_title}>{title}</h4>
                     <UilTimes className={s.modal_close} onClick={ActiveModal} />
                     <ul className={`${s.modal_services} ${v.grid}`}>
-                        {serviceElement}
+                        { serviceElement }
                     </ul>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import s from "../../Qualification.module.scss"
 import { Item } from "./Item"
 import PropTypes from "prop-types"
 
-export const History = data => {
+export const History = ({ data }) => {
     const historyElements = data.map((item, index) => {
         return (
             <Item

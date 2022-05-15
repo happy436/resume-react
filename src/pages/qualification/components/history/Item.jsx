@@ -3,9 +3,7 @@ import { UilCalendarAlt } from "@iconscout/react-unicons"
 import s from "../../Qualification.module.scss"
 import PropTypes from "prop-types"
 
-export const Item = props => {
-    const { index, arrLength, title, subtitle, calendar } = props
-
+export const Item = ({ index, arrLength, title, subtitle, calendar }) => {
     if (index % 2 === 0) {
         if (index === arrLength) {
             return (

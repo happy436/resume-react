@@ -8,7 +8,7 @@ import "swiper/scss/navigation"
 import "swiper/scss/pagination"
 import PropTypes from "prop-types"
 
-export const Slider = data => {
+export const Slider = ({ data }) => {
     const ItemElement = data.map(item => {
         return (
             <SwiperSlide key={item.title}>

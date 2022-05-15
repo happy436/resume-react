@@ -4,8 +4,8 @@ import { Tab } from "./tab/Tab"
 import { History } from "./history/History"
 import PropTypes from "prop-types"
 
-export const Container = data => {
-    const [state, setState] = useState()
+export const Container = ({ data }) => {
+    const [state, setState] = useState("")
     let content
 
     function Active(el) {

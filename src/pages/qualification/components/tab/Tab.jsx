@@ -18,7 +18,7 @@ export const Tab = ({ Active, dataTarget, icon, name }) => {
 
 Tab.propTypes = {
     Active: PropTypes.func,
-    dataTarget: PropTypes,
+    dataTarget: PropTypes.string,
     icon: PropTypes.any,
     name: PropTypes.string
 }

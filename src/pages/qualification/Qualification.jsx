@@ -36,7 +36,7 @@ export const Qualification = props => {
         },
         {
             name: language === 1 ? "Work" : "Работа",
-            data_target: "work",
+            dataTarget: "work",
             icon: <UilBriefcaseAlt className={s.icon} />,
             data: [
                 {

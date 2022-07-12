@@ -5,44 +5,35 @@ import { History } from "./history/History"
 import PropTypes from "prop-types"
 
 export const Container = ({ data }) => {
-    const [state, setState] = useState("")
-    let content
+    const [active, setActive] = useState("education")
 
-    function Active(el) {
-        setState(el.target.dataset.target)
-        const tabs = Array.from(document.getElementsByClassName(s.button))
-
-        Array.from(tabs).forEach(tab => {
-            tabs.forEach(tab => {
-                tab.classList.remove(s.active)
-            })
-        })
-        const target = el.target
-        target.classList.add(s.active)
+    function Active() {
+        setActive(prev => prev === "education" ? "work" : "education")
     }
 
     const TabElement = data.map(item => {
         return (
             <Tab
                 Active={Active}
+                active={active}
                 name={item.name}
                 icon={item.icon}
                 key={item.name}
-                dataTarget={item.dataTarget}
+                id={item.id}
             />
         )
     })
 
-    if (state === "work") {
-        content = <History data={data[1].data} />
-    } else if (state === "education") {
-        content = <History data={data[0].data} />
-    }
-
     return (
         <>
-            <div className={s.tabs}>{TabElement}</div>
-            <div className={s.sections}>{content}</div>
+            <header className={s.tabs}>{TabElement}</header>
+            <main className={s.sections}>
+                {active === "education" ? (
+                    <History data={data[0].data} />
+                ) : (
+                    <History data={data[1].data} />
+                )}
+            </main>
         </>
     )
 }

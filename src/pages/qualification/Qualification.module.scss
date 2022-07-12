@@ -11,11 +11,14 @@
 }
 
 .button {
+    font:inherit;
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     cursor: pointer;
-    &hover {
-        color: var(--first-color);
+    color:inherit;
+    border:none;
+    &:hover {
+        color: var(--first-color-lighter);
     }
     &.active {
         color: var(--first-color);

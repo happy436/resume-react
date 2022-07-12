@@ -17,7 +17,7 @@
 .social_icon {
     font-size: 1.25rem;
     color: var(--first-color);
-    &hover {
+    &:hover {
         color: var(--first-color-alt);
     }
 }
@@ -58,7 +58,7 @@
 .scroll_button {
     color: var(--first-color);
     transition: 0.3s;
-    &hover {
+    &:hover {
         transform: translateY(0.25rem);
     }
 }

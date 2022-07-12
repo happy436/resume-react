@@ -7,43 +7,43 @@ export const Item = ({ index, arrLength, title, subtitle, calendar }) => {
     if (index % 2 === 0) {
         if (index === arrLength) {
             return (
-                <div className={s.data}>
+                <li className={s.data}>
                     <div className={s.history__item}>
                         <h3 className={s.title}>{title}</h3>
                         <span className={s.subtitle}>{subtitle}</span>
-                        <div className={s.calendar}>
+                        <date className={s.calendar}>
                             <UilCalendarAlt />
                             {calendar}
-                        </div>
+                        </date>
                     </div>
                     <div>
                         <span className={s.rounder}></span>
                     </div>
                     <div></div>
-                </div>
+                </li>
             )
         }
         return (
-            <div className={s.data}>
+            <li className={s.data}>
                 <div className={s.history__item}>
                     <h3 className={s.title}>{title}</h3>
                     <span className={s.subtitle}>{subtitle}</span>
-                    <div className={s.calendar}>
+                    <date className={s.calendar}>
                         <UilCalendarAlt />
                         {calendar}
-                    </div>
+                    </date>
                 </div>
                 <div>
                     <span className={s.rounder}></span>
                     <span className={s.line}></span>
                 </div>
                 <div></div>
-            </div>
+            </li>
         )
     } else if (index % 2 === 1) {
         if (index === arrLength) {
             return (
-                <div className={s.data}>
+                <li className={s.data}>
                     <div></div>
                     <div>
                         <span className={s.rounder}></span>
@@ -51,16 +51,16 @@ export const Item = ({ index, arrLength, title, subtitle, calendar }) => {
                     <div className={s.history__item}>
                         <h3 className={s.title}>{title}</h3>
                         <span className={s.subtitle}>{subtitle}</span>
-                        <div className={s.calendar}>
+                        <date className={s.calendar}>
                             <UilCalendarAlt />
                             {calendar}
-                        </div>
+                        </date>
                     </div>
-                </div>
+                </li>
             )
         }
         return (
-            <div className={s.data}>
+            <li className={s.data}>
                 <div></div>
                 <div>
                     <span className={s.rounder}></span>
@@ -74,7 +74,7 @@ export const Item = ({ index, arrLength, title, subtitle, calendar }) => {
                         {calendar}
                     </div>
                 </div>
-            </div>
+            </li>
         )
     }
 }

@@ -14,7 +14,7 @@ export const Footer = props => {
     const { baseURL, language } = useContext(Context)
     return (
         <footer className={s.footer}>
-            <div className={s.footer__bg}>
+            <section className={s.footer__bg}>
                 <div
                     className={`${s.footer__container} ${v.container} ${v.grid}`}
                 >
@@ -46,42 +46,50 @@ export const Footer = props => {
                             </NavLink>
                         </li>
                     </ul>
-                    <div className={s.footer__socials}>
-                        <a
-                            href="https://www.instagram.com/lelouch436/"
-                            rel="noreferrer"
-                            target="_blank"
-                            className={s.footer__social}
-                        >
-                            <UilInstagram />
-                        </a>
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100006441279823"
-                            rel="noreferrer"
-                            target="_blank"
-                            className={s.footer__social}
-                        >
-                            <UilFacebookF />
-                        </a>
-                        <a
-                            href="https://t.me/happy436"
-                            rel="noreferrer"
-                            target="_blank"
-                            className={s.footer__social}
-                        >
-                            <UilTelegramAlt />
-                        </a>
-                        <a
-                            href="https://github.com/happy436?tab=repositories"
-                            rel="noreferrer"
-                            target="_blank"
-                            className={s.footer__social}
-                        >
-                            <UilGithubAlt />
-                        </a>
-                    </div>
+                    <ul className={s.footer__socials}>
+                        <li>
+                            <a
+                                href="https://www.instagram.com/lelouch436/"
+                                rel="noreferrer"
+                                target="_blank"
+                                className={s.footer__social}
+                            >
+                                <UilInstagram />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.facebook.com/profile.php?id=100006441279823"
+                                rel="noreferrer"
+                                target="_blank"
+                                className={s.footer__social}
+                            >
+                                <UilFacebookF />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://t.me/happy436"
+                                rel="noreferrer"
+                                target="_blank"
+                                className={s.footer__social}
+                            >
+                                <UilTelegramAlt />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/happy436?tab=repositories"
+                                rel="noreferrer"
+                                target="_blank"
+                                className={s.footer__social}
+                            >
+                                <UilGithubAlt />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </section>
         </footer>
     )
 }

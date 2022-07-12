@@ -3,22 +3,22 @@ import s from "../../Qualification.module.scss"
 import v from "../../../../styles/shared.module.scss"
 import PropTypes from "prop-types"
 
-export const Tab = ({ Active, dataTarget, icon, name }) => {
+export const Tab = ({ Active, id, icon, name, active }) => {
     return (
-        <div
-            className={`${s.button} ${v.button__flex}`}
+        <button
+            className={`${active === id ? s.active : null} ${s.button} ${v.button__flex}`}
             onClick={Active}
-            data-target={dataTarget}
         >
             {icon}
             {name}
-        </div>
+        </button>
     )
 }
 
 Tab.propTypes = {
+    active: PropTypes.bool,
     Active: PropTypes.func,
-    dataTarget: PropTypes.string,
+    id: PropTypes.string,
     icon: PropTypes.any,
     name: PropTypes.string
 }

@@ -32,6 +32,12 @@ export const Services = () => {
                             ? "Transfer from native technology to react, redux"
                             : "Перенос с HTML, CSS, JS на React, Redux"
                 },
+                {
+                    item:
+                        language === 1
+                            ? "Adding functionality to an existing project"
+                            : "Добавление функционала в существующий проект"
+                },
                 { item: language === 1 ? "Consultation" : "Консультация" }
             ]
         },

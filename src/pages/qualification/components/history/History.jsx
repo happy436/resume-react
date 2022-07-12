@@ -1,5 +1,4 @@
 import React from "react"
-import s from "../../Qualification.module.scss"
 import { Item } from "./Item"
 import PropTypes from "prop-types"
 
@@ -17,7 +16,7 @@ export const History = ({ data }) => {
         )
     })
 
-    return <div className={`${s.content}`}>{historyElements}</div>
+    return <ul>{historyElements}</ul>
 }
 
 History.propTypes = {

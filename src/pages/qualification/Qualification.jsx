@@ -11,7 +11,7 @@ export const Qualification = props => {
     const qualificationData = [
         {
             name: language === 1 ? "Education" : "Учеба",
-            dataTarget: "education",
+            id: "education",
             icon: <UilGraduationCap className={s.icon} />,
             data: [
                 {
@@ -30,13 +30,13 @@ export const Qualification = props => {
                 {
                     title: "Junior Frontend Developer",
                     subtitle: "Vladilen Inc",
-                    calendar: "03.01.2022 - 03.05.2022"
+                    calendar: "03.01.2022 - 11.08.2022"
                 }
             ]
         },
         {
             name: language === 1 ? "Work" : "Работа",
-            dataTarget: "work",
+            id: "work",
             icon: <UilBriefcaseAlt className={s.icon} />,
             data: [
                 {

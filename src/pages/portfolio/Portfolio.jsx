@@ -3,7 +3,6 @@ import v from "../../styles/shared.module.scss"
 import s from "./Portfolio.module.scss"
 import { Slider } from "./slider/Slider"
 import demo1 from "../../assets/demo/1.PNG"
-import demo2 from "../../assets/demo/2.PNG"
 import demo3 from "../../assets/demo/3.PNG"
 import demo4 from "../../assets/demo/4.PNG"
 import demo5 from "../../assets/demo/5.PNG"
@@ -13,6 +12,15 @@ export const Portfolio = props => {
     const { language } = useContext(Context)
 
     const data = [
+        {
+            img: demo4,
+            title: "Note-app",
+            description:
+                language === 1
+                    ? "Create, clear to-do lists to easily manage your ideas and work so you never forget anything again."
+                    : "Создавайте четкие списки дел, чтобы легко управлять своими идеями и работать, чтобы больше никогда ничего не забыть.",
+            link: "https://notes-react-4beaa.web.app/"
+        },
         {
             img: demo5,
             title: language === 1 ? "Random gallery" : "Рандомная галерея",
@@ -32,15 +40,6 @@ export const Portfolio = props => {
             link: "https://happy436.github.io/weather-react/"
         },
         {
-            img: demo2,
-            title: language === 1 ? "To-do App" : "Приложение лист задачь",
-            description:
-                language === 1
-                    ? "Create, clear to-do lists to easily manage your ideas and work so you never forget anything again."
-                    : "Создавайте четкие списки дел, чтобы легко управлять своими идеями и работать, чтобы больше никогда ничего не забыть.",
-            link: "https://happy436.github.io/todo-app-react/"
-        },
-        {
             img: demo3,
             title: language === 1 ? "Clock App" : "Приложение часы",
             description:
@@ -48,15 +47,6 @@ export const Portfolio = props => {
                     ? "Clock app with multiple color styles and functionalities, from analog to calendar"
                     : "Приложение часов с несколькими цветовыми стилями и функциями, от аналоговых до календаря",
             link: "https://happy436.github.io/clocks-react/"
-        },
-        {
-            img: demo4,
-            title: language === 1 ? "Simple slider" : "Простой слайдер",
-            description:
-                language === 1
-                    ? "Simple slider with fetch request"
-                    : "Простой слайдер с fetch запросом",
-            link: "https://happy436.github.io/slider-react/"
         }
     ]
 

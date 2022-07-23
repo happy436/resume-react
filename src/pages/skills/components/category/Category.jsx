@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 export const Category = props => {
     const { categoryIcon, categoryName, categorySubtitle, skills } = props
 
-    const Skills = skills.map(item => {
+    const Skills = skills.sort((a, b) => b.percentage - a.percentage).map(item => {
         return (
             <Skill
                 name={item.name}
